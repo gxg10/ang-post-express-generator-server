@@ -16,7 +16,6 @@ db.sequelize.sync({force: true}).then(() => {
   initial();
 });
 
-require('../routes/customer.routes.js')(app);
 
 
 /**
