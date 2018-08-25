@@ -12,8 +12,9 @@ const corsOptions = {
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-//const customers = require('./controllers/customer.controller.js');
 var customerRouter = require('./routes/customerRouter');
+var shopRouter = require('./routes/shopRouter');
+var stiriRouter = require('./routes/stiriRouter');
 
 var app = express();
 
@@ -33,8 +34,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/api/customers', customerRouter);
-//app.use('/api/customers',customers.findAll);
-//app.use('/api/customers', customers.create);
+app.use('/api/shops', shopRouter);
+app.use('/api/news', stiriRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

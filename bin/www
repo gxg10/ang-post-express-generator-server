@@ -139,6 +139,24 @@ function initial(){
     }
   ]
 
+  let shops = [
+    {
+      name: "Doraly",
+      location: "km45",
+      code: 21
+    },
+    {
+      name: "Nuba",
+      location: "Mamaia",
+      code: 1
+    },
+  ]
+
+  const Shop = db.shops;
+  for (let i = 0; i < shops.length; i++) { 
+    Shop.create(shops[i]);  
+  }
+
   const Customer = db.customers;
   for (let i = 0; i < customers.length; i++) { 
     Customer.create(customers[i]);  

@@ -20,6 +20,9 @@ db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
 db.customers = require('../model/customer.model.js')(sequelize, Sequelize);
+db.shops = require('../model/shop.model.js')(sequelize, Sequelize);
+db.stiri = require('../model/stire.model.js')(sequelize, Sequelize);
+
 
 sequelize
   .authenticate()
