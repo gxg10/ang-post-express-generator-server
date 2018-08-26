@@ -15,6 +15,7 @@ var usersRouter = require('./routes/users');
 var customerRouter = require('./routes/customerRouter');
 var shopRouter = require('./routes/shopRouter');
 var stiriRouter = require('./routes/stiriRouter');
+var uploadRouter = require('./routes/uploadRouter');
 
 var app = express();
 
@@ -36,6 +37,7 @@ app.use('/users', usersRouter);
 app.use('/api/customers', customerRouter);
 app.use('/api/shops', shopRouter);
 app.use('/api/news', stiriRouter);
+app.use('/api/txtupload', uploadRouter);
 
 
 // catch 404 and forward to error handler
