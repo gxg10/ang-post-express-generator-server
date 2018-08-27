@@ -2,6 +2,10 @@ var express = require('express');
 const bodyParser = require('body-parser');
 
 var uploadRouter = express.Router();
+
+const db = require('../config/db.config.js');
+const File = db.files;
+
 const multer = require('multer');
 const storage = multer.diskStorage({
     destination: (req, file, cb) =>{
